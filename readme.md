@@ -1,4 +1,5 @@
 # ⚙️ J.A.R.V.I.S.
+Basically Called # Just A Rather Very Intelligent System
 ### The Ultimate Cross-Platform Personal AI Assistant — By Divyansh Sharma
 
 
