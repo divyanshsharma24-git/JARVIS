@@ -1,4 +1,4 @@
-# ⚙️ MARK XLIX
+# ⚙️ J.A.R.V.I.S.
 ### The Ultimate Cross-Platform Personal AI Assistant — By Divyansh Sharma
 
 
@@ -9,13 +9,13 @@ A real-time voice AI that can hear, see, understand, and control your computer �
 
 ## ✨ Overview
 
-MARK XLIX deepens the personal assistant foundation. Rather than adding more tools, this build focused on making the assistant truly *yours*: it starts with your computer, learns your name, and pays attention to what you're doing. The goal before the plugin era begins is a core that feels alive — not just reactive.
+J.A.R.V.I.S. deepens the personal assistant foundation. Rather than adding more tools, this build focused on making the assistant truly *yours*: it starts with your computer, learns your name, and pays attention to what you're doing. The goal before the plugin era begins is a core that feels alive — not just reactive.
 
 ---
 
 ##  Capabilities
 
-### Core Features
+### Core Features of J.A.R.V.I.S.
 | Feature | Description |
 |---|---|
 | 🎙️ Real-time Voice | Ultra-low latency conversation in any language via Gemini Live API |
@@ -44,7 +44,7 @@ MARK XLIX deepens the personal assistant foundation. Rather than adding more too
 
 ---
 
-## 🆕 What's New in XLIX
+## 🆕 What's New in J.A.R.V.I.S.
 
 ### ⚡ Auto-Start on Boot
 The assistant now registers itself with the operating system's startup system. One click in the UI toggles it on or off. On Windows, it writes to the registry using `pythonw.exe` so no console window ever appears. On macOS it installs a LaunchAgent plist; on Linux a `.desktop` autostart entry. The button reflects the current state every time the app launches.
@@ -52,7 +52,7 @@ The assistant now registers itself with the operating system's startup system. O
 ### 🎨 Assistant Customization
 The assistant is no longer locked to the name "JARVIS". Click `⚙ CUSTOMISE ASSISTANT` in the right panel to change:
 - **Assistant name** — displayed everywhere in the UI (title bar, header, HUD, log, footer) and injected into the Gemini system prompt so the AI knows its own name
-- **Your name** — how the assistant addresses you. Leave blank for the default language-aware addressing (`sir` / `efendim`), or set your actual name for a more personal feel
+- **Your name** — how the assistant addresses you. Leave blank for the default language-aware addressing (`sir`), or set your actual name for a more personal feel
 
 Changes take effect immediately without restarting.
 
@@ -64,16 +64,6 @@ The morning briefing can now be turned on or off with one click from the setting
 
 ---
 
-## 🗺️ Mark Roadmap
-
-| Mark | Focus |
-|---|---|
-| **XLVIII** | Instant interrupt · parallel news · two-phase briefing · exponential backoff · vision cooldown |
-| **XLIX** | Auto-start · clipboard intelligence · assistant customization |
-| **L** | Wake word · proactive system 2.0 · session memory / daily continuity |
-| **LI+** | Plugin system · email · quiz mode · calorie counter · and more |
-
----
 
 ## ⚡ Quick Start
 
