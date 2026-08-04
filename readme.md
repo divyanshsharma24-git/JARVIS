@@ -48,7 +48,7 @@ JARVIS is also being extended toward a hybrid **local + web LLM architecture** a
 
 ---
 
-# 🖥️ JARVIS MARK XLIX Interface
+# 🖥️ J.A.R.V.I.S. Home Interface
 
 The current JARVIS interface provides a centralized HUD for voice interaction, system monitoring, task feedback, file input, command execution and activity logging.
 
