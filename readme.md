@@ -1,72 +1,310 @@
-# ⚙️ J.A.R.V.I.S.
-# Basically Called Just A Rather Very Intelligent System
-### The Ultimate Cross-Platform Personal AI Assistant — By Divyansh Sharma
+# J.A.R.V.I.S.
+### Just A Rather Very Intelligent System
 
+> **A multimodal AI desktop and spatial-computing assistant built with Python and Machine Learning.**
 
+J.A.R.V.I.S. is an experimental AI agent designed to connect natural-language intelligence with the computer and, progressively, the physical environment. It combines **local and web-based LLMs, real-time voice interaction, computer vision, persistent memory, autonomous task execution, desktop/browser automation, hardware monitoring, and contextual screen awareness**.
 
-A real-time voice AI that can hear, see, understand, and control your computer — on any OS. Supports Windows, macOS, and Linux. Built on the Gemini Live API for native audio streaming, delivering zero subscriptions and total digital autonomy.
-
----
-
-## ✨ Overview
-
-J.A.R.V.I.S. deepens the personal assistant foundation. Rather than adding more tools, this build focused on making the assistant truly *yours*: it starts with your computer, learns your name, and pays attention to what you're doing. The goal before the plugin era begins is a core that feels alive — not just reactive.
+The next stage extends JARVIS toward **3D/AR spatial visualization, ML-based gesture and motion recognition, sensor fusion, and RF-based spatial sensing using RuView**.
 
 ---
 
-##  Capabilities
+## Core Capabilities
 
-### Core Features of J.A.R.V.I.S.
-| Feature | Description |
+| Capability | Description |
 |---|---|
-| 🎙️ Real-time Voice | Ultra-low latency conversation in any language via Gemini Live API |
-| 🖥️ System Control | Launch apps, adjust volume/brightness, WiFi, shortcuts, power — all by voice |
-| 🧩 Autonomous Tasks | High-level planning for complex multi-step goals via agent mode |
-| 👁️ Visual Awareness | Real-time screen capture and webcam vision piped into your main Gemini session |
-| 🧠 Persistent Memory | Deeply remembers projects, preferences, and personal context across sessions |
-| ⌨️ Hybrid Input | Seamlessly switch between keyboard typing and voice commands |
-| 🌅 Morning Briefing | On first boot: greets you, reads the time, fetches live news headlines, and checks weather |
-| 🔔 Proactive Check-ins | After 15 minutes of silence, checks context and offers something genuinely useful |
-| 📊 Hardware Monitoring | Continuous CPU, RAM, GPU and temperature telemetry with localized voice alerts |
-| 🌤️ Weather Report | Live weather data for your city, personalized from memory |
-| 🗺️ Dynamic Content Panel | Scrollable display layer beneath the HUD that renders web results, news, and search data |
-| 🔍 Multi-Mode Web Search | `news` / `research` / `price` / `compare` / `search` — Gemini Grounded first, DDG fallback |
-| ⏰ Smart Reminders | OS-native scheduled notifications (Windows Task Scheduler / macOS LaunchAgent / Linux systemd) |
-| ✈️ Flight Finder | Live flight price and availability lookup |
-| 🎮 Game Updater | Checks and triggers game updates on Steam and Epic Games on demand |
-| 📂 File Processor | Read, summarize, and answer questions about local files |
-| 💻 Code Helper | Inline code review, debugging, and generation |
-| 🌐 Browser Control | Open URLs, navigate tabs, and interact with the browser by voice |
-| 📨 Send Message | Compose and send messages through WhatsApp, Telegram, and more |
-| 🎬 YouTube Control | Search, play, and control YouTube playback by voice |
-| 🖱️ Desktop Control | Taskbar, window management, and desktop-level operations |
-| 🧑‍💻 Silent Language Memory | Detects spoken language on first use and saves it — all future sessions adapt automatically |
-| 📱 Remote Dashboard | Control the assistant from your phone via QR code pairing |
+| Real-Time Voice AI | Low-latency multilingual voice interaction |
+| Hybrid LLM Intelligence | Architecture for local models and web/API-based LLMs |
+| Computer Vision | Screen and webcam understanding for visual context |
+| Persistent Memory | Retains project, preference, and contextual information across sessions |
+| Autonomous Agent | Plans and executes multi-step computer tasks |
+| Desktop Control | Application launching, keyboard/mouse actions, windows, shortcuts and system operations |
+| Browser Automation | Opens URLs, navigates browser workflows and performs web-oriented actions |
+| File Intelligence | Reads, summarizes and reasons over local files |
+| Hardware Monitoring | CPU, RAM, GPU and temperature telemetry |
+| Web Research | Search/research workflows with grounded web information and fallback search |
+| Messaging | Messaging integrations and automated communication actions |
+| Code Assistance | Code review, debugging, generation and developer-agent workflows |
+| Smart Reminders | OS-native scheduled notifications |
+| Remote Dashboard | Remote assistant control through phone pairing |
+| Clipboard Intelligence | Translate, summarize, explain and fix copied text |
+| Proactive Assistance | Context-aware suggestions after periods of inactivity |
 
 ---
 
-## 🆕 What's New in J.A.R.V.I.S.
+## Current System
 
-### ⚡ Auto-Start on Boot
-The assistant now registers itself with the operating system's startup system. One click in the UI toggles it on or off. On Windows, it writes to the registry using `pythonw.exe` so no console window ever appears. On macOS it installs a LaunchAgent plist; on Linux a `.desktop` autostart entry. The button reflects the current state every time the app launches.
+JARVIS is structured as a modular Python AI system rather than a single chatbot. The AI layer interprets user intent and routes tasks to dedicated modules for computer control, vision, web research, files, messaging, monitoring and other actions.
 
-### 🎨 Assistant Customization
-The assistant is no longer locked to the name "JARVIS". Click `⚙ CUSTOMISE ASSISTANT` in the right panel to change:
-- **Assistant name** — displayed everywhere in the UI (title bar, header, HUD, log, footer) and injected into the Gemini system prompt so the AI knows its own name
-- **Your name** — how the assistant addresses you. Leave blank for the default language-aware addressing (`sir`), or set your actual name for a more personal feel
-
-Changes take effect immediately without restarting.
-
-### 📋 Clipboard Intelligence
-Copy any text of 10 or more characters and a floating panel appears at the bottom of the window. Four quick actions — **TRANSLATE**, **SUMMARISE**, **EXPLAIN**, **FIX** — send the copied content directly to the assistant with one click. The panel auto-dismisses after 8 seconds. This turns the clipboard into a silent command channel for anything on your screen.
-
-### ☀ Morning Brief Toggle + Speed Optimization
-The morning briefing can now be turned on or off with one click from the settings drawer (`⚙` → `☀ MORNING BRIEF: ON/OFF`). Users who don't want a startup briefing can disable it permanently; the setting survives restarts. The briefing itself was also re-engineered: news is now pre-fetched in a background thread the moment the session starts, running in parallel while the greeting plays. By the time the greeting finishes, the results are already ready — no extra Gemini tool-call round-trip needed. Briefing delivery is noticeably faster as a result.
+```text
+                         USER
+              Voice / Text / Visual Context
+                           |
+                           v
+                +---------------------+
+                |    JARVIS AI CORE   |
+                | Reasoning + Memory  |
+                +----------+----------+
+                           |
+          +----------------+----------------+
+          |                |                |
+          v                v                v
+   +-------------+  +-------------+  +-------------+
+   |   VISION    |  |    AGENT    |  |   SYSTEM    |
+   | Screen/Cam  |  | Task Engine |  |  CONTROL    |
+   +-------------+  +-------------+  +-------------+
+          |                |                |
+          +----------------+----------------+
+                           |
+             Browser / Files / Apps / OS
+```
 
 ---
 
+## AI Architecture
 
-## ⚡ Quick Start
+JARVIS is designed around a **hybrid AI architecture**.
+
+### Web / Cloud Intelligence
+Web-based multimodal models can provide high-level reasoning, natural conversation, vision understanding and tool orchestration.
+
+### Local Intelligence
+The architecture is being expanded to support **locally running LLMs**, allowing selected reasoning and automation workloads to execute on-device.
+
+This hybrid approach is intended to let JARVIS choose between local computation and network-based intelligence depending on the task, available hardware, latency and capability requirements.
+
+---
+
+## Vision & Context Awareness
+
+JARVIS can use screen capture and webcam input as contextual information for the AI session.
+
+This enables workflows such as:
+
+- Understanding visible screen content
+- Reasoning about applications currently in use
+- Camera-based visual context
+- Combining voice commands with visual information
+- Context-aware desktop actions
+
+---
+
+## Desktop Autonomy
+
+JARVIS is designed to move beyond question-answer interaction and perform actions directly on the host computer.
+
+Supported/implemented modules include:
+
+- Application launching
+- Volume and brightness control
+- Wi-Fi and system settings
+- Keyboard shortcuts
+- Mouse and window operations
+- Browser control
+- File-system operations
+- YouTube control
+- Messaging
+- Game update management
+- Hardware telemetry
+- Scheduled reminders
+- Developer/code assistance
+
+---
+
+# Spatial Intelligence
+
+> **Status: In Development / Research**
+
+The next JARVIS architecture extends perception and interaction beyond the conventional desktop.
+
+## 3D / AR Visualization
+
+The spatial-computing layer is intended to allow JARVIS to generate and manipulate interactive visual representations instead of limiting responses to text and conventional GUI elements.
+
+Planned capabilities include:
+
+- Interactive 3D model visualization
+- AI-assisted 3D model generation
+- Voice-controlled model manipulation
+- Rotation, zoom and exploded views
+- Spatial HUD interfaces
+- AR-style information overlays
+- Real-time sensor visualization
+- Interactive scientific and engineering models
+
+```text
+Voice / AI Command
+        |
+        v
+   JARVIS Core
+        |
+        v
+ Spatial Engine
+        |
+  +-----+------+
+  |            |
+  v            v
+3D Models    AR/HUD
+  |            |
+  +-----+------+
+        |
+        v
+Interactive Visualization
+```
+
+---
+
+## Motion & Gesture Intelligence
+
+> **Status: In Development**
+
+Computer-vision and Machine Learning pipelines are planned for interpreting physical movement as an input mechanism.
+
+Target capabilities:
+
+- Hand tracking
+- Gesture recognition
+- Body pose estimation
+- Motion classification
+- Gesture-to-command mapping
+- Touchless computer interaction
+- Motion-aware 3D interfaces
+
+The goal is to allow interactions such as controlling JARVIS or manipulating a 3D object using natural hand/body movements.
+
+---
+
+## RF Spatial Perception — RuView
+
+> **Status: Planned / Experimental**
+
+JARVIS is planned to integrate **RuView-based RF sensing** as an experimental spatial-perception layer.
+
+Rather than relying exclusively on cameras, RF-derived information could provide another source of environmental data for presence and motion analysis.
+
+```text
+              RF / Wireless Signals
+                       |
+                       v
+              +----------------+
+              | RuView / RF    |
+              | Processing     |
+              +-------+--------+
+                      |
+                      v
+              Spatial Features
+                      |
+                      v
+              ML Interpretation
+                      |
+          +-----------+-----------+
+          |                       |
+          v                       v
+   Presence / Motion       Spatial Context
+          |                       |
+          +-----------+-----------+
+                      |
+                      v
+                 JARVIS CORE
+                      |
+                      v
+             3D / AR Visualization
+```
+
+The long-term research direction is **sensor fusion**: combining camera vision, motion information, RF-derived signals and AI reasoning into a unified representation of the surrounding environment.
+
+---
+
+# Development Roadmap
+
+```text
+JARVIS Core
+Voice AI + Desktop Automation
+        |
+        v
+Multimodal JARVIS
+Vision + Screen Awareness + Memory
+        |
+        v
+Agentic JARVIS
+Autonomous Multi-Step Execution
+        |
+        v
+Spatial JARVIS
+3D Visualization + Spatial UI
+        |
+        v
+Motion Intelligence
+Gesture + Pose + ML Recognition
+        |
+        v
+Sensor Intelligence
+RF / RuView + Sensor Fusion
+        |
+        v
+Environment-Aware AI System
+```
+
+### Current
+- Voice-driven AI interaction
+- Desktop and browser control
+- Screen/webcam awareness
+- Persistent memory
+- Autonomous task execution
+- File and web intelligence
+- Hardware monitoring
+- Messaging and developer tools
+
+### In Development
+- Local LLM integration
+- Interactive 3D visualization
+- AI-driven 3D model workflows
+- Gesture recognition
+- Motion recognition
+- Pose estimation
+- Spatial interfaces
+
+### Research / Future
+- RuView RF spatial sensing
+- Multi-sensor fusion
+- Environment mapping
+- Camera + RF perception
+- Spatially aware autonomous actions
+- Advanced AR interaction
+
+---
+
+# Screenshots & Demonstrations
+
+Add actual project screenshots and demonstrations here as each subsystem becomes operational.
+
+```markdown
+<!-- Example:
+![JARVIS HUD](assets/jarvis-hud.png)
+![Vision System](assets/vision-demo.png)
+![3D Spatial Interface](assets/3d-spatial-demo.png)
+![Gesture Recognition](assets/gesture-demo.png)
+![RF Spatial System](assets/rf-spatial-demo.png)
+-->
+```
+
+Recommended repository structure:
+
+```text
+assets/
+├── jarvis-hud.png
+├── desktop-control.png
+├── vision-demo.png
+├── 3d-spatial-demo.png
+├── gesture-demo.png
+└── architecture.png
+```
+
+Use **real screenshots for implemented functionality**. Experimental concepts should be labelled as simulations, prototypes or architecture diagrams rather than presented as completed functionality.
+
+---
+
+# Quick Start
 
 ```bash
 git clone https://github.com/divyanshsharma24-git/JARVIS.git
@@ -75,56 +313,76 @@ pip install -r requirements.txt
 python main.py
 ```
 
-> ⚠️ **Installation Note:** Some OS-specific dependencies are not bundled in `requirements.txt` to keep the repo lightweight. If you hit a `ModuleNotFoundError`, install the missing package with `pip install <module_name>`.
+> Some OS-specific dependencies may need to be installed separately.
 
 ---
 
-## 📋 Requirements
+# Requirements
 
 | Requirement | Details |
-| --- | --- |
-| **OS** | Windows 10/11, macOS, or Linux |
-| **Python** | 3.11 or 3.12 |
-| **Microphone** | Required for voice interaction |
-| **API Key** | Free Gemini API key (`config/api_keys.json`) |
+|---|---|
+| OS | Windows 10/11, macOS or Linux |
+| Python | Python 3.11 / 3.12 |
+| Microphone | Required for voice interaction |
+| Camera | Required for camera-based visual perception |
+| AI Configuration | Configure the required model/API credentials locally |
+| GPU | Recommended for heavier local AI/vision workloads |
 
 ---
 
-## 🗂️ Project Structure
+# Project Structure
 
-```
-Mark XLIX/
-├── main.py                  # Core loop — Gemini Live session, audio I/O, tool dispatch
-├── ui.py                    # PyQt6 HUD — waveform, log panel, interrupt button, camera feed
-├── setup.py                 # First-run configuration wizard
+```text
+JARVIS/
+├── main.py
+├── ui.py
+├── setup.py
 ├── actions/
-│   ├── web_search.py        # Gemini + DDG parallel search (news, research, price, compare)
-│   ├── screen_processor.py  # Screen capture & webcam vision via Gemini Live
-│   ├── reminder.py          # OS-native scheduled notifications
-│   ├── system_monitor.py    # CPU / RAM / GPU / temperature telemetry
-│   ├── computer_settings.py # Volume, brightness, WiFi, power
-│   ├── computer_control.py  # Keyboard shortcuts, mouse, window management
-│   ├── open_app.py          # Application launcher
-│   ├── browser_control.py   # Web browser control
-│   ├── file_controller.py   # File system operations
-│   ├── file_processor.py    # Document reading and summarization
-│   ├── send_message.py      # Messaging integration
-│   ├── weather_report.py    # Live weather data
-│   ├── flight_finder.py     # Flight search
-│   ├── youtube_video.py     # YouTube playback control
-│   ├── game_updater.py      # Game update management (Steam / Epic)
-│   ├── code_helper.py       # Code review and generation
-│   ├── dev_agent.py         # Developer task agent
-│   ├── desktop.py           # Desktop and taskbar control
-│   └── proactive.py         # Proactive silence-break suggestions
-├── memory/                  # Persistent key-value memory store
+│   ├── web_search.py
+│   ├── screen_processor.py
+│   ├── reminder.py
+│   ├── system_monitor.py
+│   ├── computer_settings.py
+│   ├── computer_control.py
+│   ├── open_app.py
+│   ├── browser_control.py
+│   ├── file_controller.py
+│   ├── file_processor.py
+│   ├── send_message.py
+│   ├── weather_report.py
+│   ├── flight_finder.py
+│   ├── youtube_video.py
+│   ├── game_updater.py
+│   ├── code_helper.py
+│   ├── dev_agent.py
+│   ├── desktop.py
+│   └── proactive.py
+├── memory/
 ├── core/
-│   └── prompt.txt           # Assistant personality and tool-routing rules
+│   └── prompt.txt
 └── config/
-    └── api_keys.json        # API key, OS setting, assistant name, user name
+    └── api_keys.json
 ```
 
 ---
 
-#### THANK YOU FOR DOWNLOADING 
 
+
+# Technology Direction
+
+**Python · Machine Learning · Multimodal AI · Local LLMs · Web LLMs · Computer Vision · Agentic AI · Desktop Automation · 3D Graphics · Spatial Computing · Gesture Recognition · Sensor Fusion · RF Sensing**
+
+---
+
+## Author
+
+## Divyansh Sharma 
+### Engineering 2nd Year Undergraduate
+### Department of Artificial Intelligence and Data Science Engineering (AIDE)
+### Indian Institute of Technology, Jodhpur 
+
+
+
+
+
+### J.A.R.V.I.S. is an independently developed experimental AI and spatial-computing project.
