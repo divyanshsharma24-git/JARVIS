@@ -1,262 +1,529 @@
-# J.A.R.V.I.S.
-### Just A Rather Very Intelligent System
+# ⚙️ J.A.R.V.I.S.
+## Just A Rather Very Intelligent System
 
-> **A multimodal AI desktop and spatial-computing assistant built with Python and Machine Learning.**
+### Multimodal AI Desktop & Spatial Computing Assistant
 
-J.A.R.V.I.S. is an experimental AI agent designed to connect natural-language intelligence with the computer and, progressively, the physical environment. It combines **local and web-based LLMs, real-time voice interaction, computer vision, persistent memory, autonomous task execution, desktop/browser automation, hardware monitoring, and contextual screen awareness**.
+<p align="center">
+  <img src="assets/jarvis-hud.png" width="100%" alt="JARVIS MARK XLIX Interface">
+</p>
 
-The next stage extends JARVIS toward **3D/AR spatial visualization, ML-based gesture and motion recognition, sensor fusion, and RF-based spatial sensing using RuView**.
+<p align="center">
+  <b>Python • Machine Learning • Multimodal AI • Local & Web LLMs • Computer Vision • Agentic Automation • Spatial Computing</b>
+</p>
 
 ---
 
-## Core Capabilities
+## Overview
+
+**J.A.R.V.I.S.** is a Python and Machine Learning-based multimodal AI agent designed to move beyond a conventional chatbot and operate as an intelligent interface between the user, the computer, and eventually the surrounding physical environment.
+
+The current system combines **real-time voice interaction, web/cloud AI, computer vision, persistent memory, autonomous task execution, full desktop and browser control, file intelligence, web research, messaging, hardware telemetry, screen awareness, developer tools, reminders, and remote interaction**.
+
+JARVIS is also being extended toward a hybrid **local + web LLM architecture** and a spatial-computing layer incorporating **interactive 3D/AR visualization, ML-based gesture and motion recognition, sensor fusion, and experimental RuView RF spatial sensing**.
+
+> **Project status:** Active development. Features under development or research are explicitly labelled below and are not presented as completed functionality.
+
+---
+
+# ✨ Core Capabilities
 
 | Capability | Description |
 |---|---|
-| Real-Time Voice AI | Low-latency multilingual voice interaction |
-| Hybrid LLM Intelligence | Architecture for local models and web/API-based LLMs |
-| Computer Vision | Screen and webcam understanding for visual context |
-| Persistent Memory | Retains project, preference, and contextual information across sessions |
-| Autonomous Agent | Plans and executes multi-step computer tasks |
-| Desktop Control | Application launching, keyboard/mouse actions, windows, shortcuts and system operations |
-| Browser Automation | Opens URLs, navigates browser workflows and performs web-oriented actions |
-| File Intelligence | Reads, summarizes and reasons over local files |
-| Hardware Monitoring | CPU, RAM, GPU and temperature telemetry |
-| Web Research | Search/research workflows with grounded web information and fallback search |
-| Messaging | Messaging integrations and automated communication actions |
-| Code Assistance | Code review, debugging, generation and developer-agent workflows |
-| Smart Reminders | OS-native scheduled notifications |
-| Remote Dashboard | Remote assistant control through phone pairing |
-| Clipboard Intelligence | Translate, summarize, explain and fix copied text |
-| Proactive Assistance | Context-aware suggestions after periods of inactivity |
+| 🎙️ **Real-Time Voice AI** | Low-latency conversational interaction and voice-command execution |
+| 🧠 **Hybrid AI Architecture** | Web/cloud LLM intelligence with local LLM integration being developed |
+| 👁️ **Visual Awareness** | Screen capture and webcam context for multimodal reasoning |
+| 💾 **Persistent Memory** | Retains useful project, preference, and contextual information across sessions |
+| 🧩 **Autonomous Tasks** | Agent-oriented execution of multi-step computer tasks |
+| 🖥️ **Desktop Control** | Applications, keyboard/mouse, windows, shortcuts, system settings and desktop operations |
+| 🌐 **Browser Control** | Browser launching, navigation and web-oriented automation |
+| 🔍 **Web Research** | Search, research, news, price and comparison workflows |
+| 📂 **File Intelligence** | Local file reading, processing, summarization and question answering |
+| 📊 **Hardware Monitoring** | CPU, RAM, GPU and temperature/system telemetry |
+| 📨 **Messaging** | Messaging integrations and automated communication actions |
+| 💻 **Developer Tools** | Code review, debugging, generation and developer-agent workflows |
+| ⏰ **Smart Reminders** | OS-native scheduled notifications |
+| 📋 **Clipboard Intelligence** | Translate, summarize, explain and fix copied text |
+| 🔔 **Proactive Assistance** | Context-aware check-ins after inactivity |
+| 📱 **Remote Dashboard** | Remote assistant interaction through phone pairing |
 
 ---
 
-## Current System
+# 🖥️ JARVIS MARK XLIX Interface
 
-JARVIS is structured as a modular Python AI system rather than a single chatbot. The AI layer interprets user intent and routes tasks to dedicated modules for computer control, vision, web research, files, messaging, monitoring and other actions.
+The current JARVIS interface provides a centralized HUD for voice interaction, system monitoring, task feedback, file input, command execution and activity logging.
+
+<p align="center">
+  <img src="assets/jarvis-hud.png" width="100%" alt="JARVIS MARK XLIX HUD">
+</p>
+
+<p align="center">
+  <i>Actual JARVIS MARK XLIX interface.</i>
+</p>
+
+The HUD exposes live system information while keeping the AI interaction layer continuously accessible. JARVIS can report its actions through the activity log while receiving commands through voice or text.
+
+---
+
+# 🖱️ Autonomous Desktop & Browser Control
+
+JARVIS can translate natural-language instructions into desktop-level actions such as opening applications, interacting with windows, launching browser workflows and executing supported system operations.
+
+<p align="center">
+  <img src="assets/jarvis-desktop-control.png" width="100%" alt="JARVIS controlling Chrome through a voice command">
+</p>
+
+<p align="center">
+  <i>Actual JARVIS execution: browser opened and a Google search triggered from a natural-language command.</i>
+</p>
+
+Examples of supported desktop-oriented operations include:
+
+- Launching applications
+- Browser opening and navigation
+- Keyboard shortcuts
+- Mouse and window operations
+- Volume and brightness control
+- Wi-Fi/system controls
+- File-system operations
+- YouTube playback control
+- Messaging actions
+- Scheduled reminders
+- System and hardware monitoring
+
+---
+
+# 👁️ Computer Vision & Screen Awareness
+
+JARVIS can use screen capture and webcam input as visual context for multimodal reasoning.
+
+This creates the foundation for:
+
+- Screen understanding
+- Camera-based scene awareness
+- Visual question answering
+- Context-aware desktop actions
+- Object and environment interpretation
+- Combining voice instructions with visual information
+
+### Computer-Vision Development Reference
+
+<p align="center">
+  <img src="assets/computer-vision-reference.png" width="90%" alt="Computer vision object detection reference">
+</p>
+
+<p align="center">
+  <i>Computer-vision reference demonstrating object detection and confidence-based classification. This image is a development/reference example, not a JARVIS UI screenshot.</i>
+</p>
+
+---
+
+# 🧠 Local + Web LLM Intelligence
+
+JARVIS is designed around a **hybrid AI architecture** rather than depending permanently on one model.
 
 ```text
-                         USER
-              Voice / Text / Visual Context
-                           |
-                           v
-                +---------------------+
-                |    JARVIS AI CORE   |
-                | Reasoning + Memory  |
-                +----------+----------+
-                           |
-          +----------------+----------------+
-          |                |                |
-          v                v                v
-   +-------------+  +-------------+  +-------------+
-   |   VISION    |  |    AGENT    |  |   SYSTEM    |
-   | Screen/Cam  |  | Task Engine |  |  CONTROL    |
-   +-------------+  +-------------+  +-------------+
-          |                |                |
-          +----------------+----------------+
-                           |
-             Browser / Files / Apps / OS
+                    USER
+             Voice / Text / Vision
+                      │
+                      ▼
+             ┌─────────────────┐
+             │   JARVIS CORE   │
+             │ Context + Tools │
+             └────────┬────────┘
+                      │
+             ┌────────┴────────┐
+             │                 │
+             ▼                 ▼
+      ┌─────────────┐   ┌─────────────┐
+      │  WEB / API  │   │  LOCAL LLM  │
+      │    LLMs     │   │   ENGINE    │
+      └──────┬──────┘   └──────┬──────┘
+             │                 │
+             └────────┬────────┘
+                      ▼
+             Reasoning / Routing
+                      │
+                      ▼
+        Desktop • Vision • Files • Web
+```
+
+### Web / Cloud Intelligence
+
+Web/API-based multimodal models can provide high-level reasoning, conversation, visual understanding and tool orchestration.
+
+### Local Intelligence
+
+Local LLM support is being developed for selected workloads where on-device execution is useful.
+
+The long-term architecture is intended to route workloads according to factors such as:
+
+- Task complexity
+- Model capability
+- Available GPU/CPU resources
+- Latency
+- Network availability
+- Privacy requirements
+
+---
+
+# 🧩 Modular Agent Architecture
+
+JARVIS is not a single monolithic chatbot script. Core functions are separated into dedicated action modules.
+
+```text
+                           ┌──────────────────┐
+                           │       USER       │
+                           │ Voice/Text/Vision│
+                           └────────┬─────────┘
+                                    │
+                                    ▼
+                           ┌──────────────────┐
+                           │   JARVIS CORE    │
+                           │ Reasoning/Memory │
+                           └────────┬─────────┘
+                                    │
+             ┌──────────────────────┼──────────────────────┐
+             │                      │                      │
+             ▼                      ▼                      ▼
+      ┌──────────────┐       ┌──────────────┐       ┌──────────────┐
+      │    VISION    │       │    AGENT     │       │    SYSTEM    │
+      │ Screen/Camera│       │ Task Planning│       │   CONTROL    │
+      └──────┬───────┘       └──────┬───────┘       └──────┬───────┘
+             │                      │                      │
+             └──────────────────────┼──────────────────────┘
+                                    ▼
+                    Browser • Files • Apps • OS
+                                    │
+                                    ▼
+                       External / Physical World
 ```
 
 ---
 
-## AI Architecture
+# 🌐 Web Research & Information Retrieval
 
-JARVIS is designed around a **hybrid AI architecture**.
+JARVIS supports multiple search-oriented workflows including:
 
-### Web / Cloud Intelligence
-Web-based multimodal models can provide high-level reasoning, natural conversation, vision understanding and tool orchestration.
+- General search
+- Research
+- News
+- Price lookup
+- Comparisons
 
-### Local Intelligence
-The architecture is being expanded to support **locally running LLMs**, allowing selected reasoning and automation workloads to execute on-device.
-
-This hybrid approach is intended to let JARVIS choose between local computation and network-based intelligence depending on the task, available hardware, latency and capability requirements.
-
----
-
-## Vision & Context Awareness
-
-JARVIS can use screen capture and webcam input as contextual information for the AI session.
-
-This enables workflows such as:
-
-- Understanding visible screen content
-- Reasoning about applications currently in use
-- Camera-based visual context
-- Combining voice commands with visual information
-- Context-aware desktop actions
+The system can combine AI reasoning with web retrieval and fallback search mechanisms rather than relying only on static model knowledge.
 
 ---
 
-## Desktop Autonomy
+# 💾 Persistent Memory
 
-JARVIS is designed to move beyond question-answer interaction and perform actions directly on the host computer.
+JARVIS maintains persistent contextual memory across sessions.
 
-Supported/implemented modules include:
+The memory layer is intended to make interactions increasingly contextual by retaining useful information such as project context, preferences and previously established assistant settings.
 
-- Application launching
-- Volume and brightness control
-- Wi-Fi and system settings
-- Keyboard shortcuts
-- Mouse and window operations
-- Browser control
-- File-system operations
-- YouTube control
-- Messaging
-- Game update management
-- Hardware telemetry
-- Scheduled reminders
-- Developer/code assistance
+This allows JARVIS to behave more like a persistent software agent than an isolated question-answer session.
 
 ---
 
-# Spatial Intelligence
+# 📊 Hardware & System Awareness
+
+JARVIS monitors host-system telemetry including supported CPU, RAM, GPU and temperature/system information.
+
+The telemetry layer can be used for:
+
+- Live HUD monitoring
+- Voice alerts
+- Resource-aware AI workloads
+- Future local-model routing
+- Detecting abnormal system utilization
+
+---
+
+# 🚀 Spatial Intelligence
 
 > **Status: In Development / Research**
 
-The next JARVIS architecture extends perception and interaction beyond the conventional desktop.
+The next development stage extends JARVIS beyond conventional desktop interaction toward **spatial human-computer interaction**.
 
-## 3D / AR Visualization
-
-The spatial-computing layer is intended to allow JARVIS to generate and manipulate interactive visual representations instead of limiting responses to text and conventional GUI elements.
-
-Planned capabilities include:
-
-- Interactive 3D model visualization
-- AI-assisted 3D model generation
-- Voice-controlled model manipulation
-- Rotation, zoom and exploded views
-- Spatial HUD interfaces
-- AR-style information overlays
-- Real-time sensor visualization
-- Interactive scientific and engineering models
+The intended architecture combines:
 
 ```text
-Voice / AI Command
-        |
-        v
-   JARVIS Core
-        |
-        v
- Spatial Engine
-        |
-  +-----+------+
-  |            |
-  v            v
-3D Models    AR/HUD
-  |            |
-  +-----+------+
-        |
-        v
-Interactive Visualization
+Computer Vision
+      │
+Gesture / Motion ML
+      │
+3D Spatial Engine
+      │
+RF / Sensor Data
+      │
+Sensor Fusion
+      │
+      ▼
+ JARVIS AI CORE
+      │
+      ▼
+Environment-Aware Interaction
 ```
 
 ---
 
-## Motion & Gesture Intelligence
+# 🌍 3D / AR Spatial Visualization
 
 > **Status: In Development**
 
-Computer-vision and Machine Learning pipelines are planned for interpreting physical movement as an input mechanism.
+JARVIS is being extended with a 3D visualization layer for displaying and interacting with spatial, scientific and engineering information.
+
+### Development Direction
+
+<p align="center">
+  <img src="assets/3d-spatial-reference.png" width="90%" alt="Interactive 3D globe development reference">
+</p>
+
+<p align="center">
+  <i>Reference example for the interactive 3D visualization direction. It is not presented as a current JARVIS screenshot.</i>
+</p>
+
+Target capabilities include:
+
+- Interactive 3D models
+- AI-assisted model generation
+- Voice-controlled 3D manipulation
+- Rotate / zoom / pan controls
+- Exploded engineering views
+- Scientific visualizations
+- Spatial HUD interfaces
+- AR-style information overlays
+- Sensor-data visualization
+
+The intended interaction model is:
+
+```text
+"JARVIS, show me a 3D model of Earth."
+                    │
+                    ▼
+               AI Reasoning
+                    │
+                    ▼
+            3D Asset / Scene
+                    │
+                    ▼
+              Spatial Engine
+                    │
+        ┌───────────┴───────────┐
+        ▼                       ▼
+ Voice Manipulation       Gesture Control
+        │                       │
+        └───────────┬───────────┘
+                    ▼
+          Interactive 3D Model
+```
+
+---
+
+# ✋ ML Gesture & Motion Recognition
+
+> **Status: In Development**
+
+The gesture system is intended to make physical movement another input channel for JARVIS.
+
+### Gesture Recognition Reference
+
+<p align="center">
+  <img src="assets/gesture-recognition-reference.png" width="85%" alt="Machine learning hand gesture recognition reference">
+</p>
+
+<p align="center">
+  <i>Reference implementation illustrating hand-landmark and gesture-recognition techniques.</i>
+</p>
 
 Target capabilities:
 
-- Hand tracking
-- Gesture recognition
+- Hand landmark tracking
+- Hand gesture classification
 - Body pose estimation
-- Motion classification
+- Motion recognition
 - Gesture-to-command mapping
-- Touchless computer interaction
-- Motion-aware 3D interfaces
+- Touchless interaction
+- Gesture-controlled 3D objects
 
-The goal is to allow interactions such as controlling JARVIS or manipulating a 3D object using natural hand/body movements.
-
----
-
-## RF Spatial Perception — RuView
-
-> **Status: Planned / Experimental**
-
-JARVIS is planned to integrate **RuView-based RF sensing** as an experimental spatial-perception layer.
-
-Rather than relying exclusively on cameras, RF-derived information could provide another source of environmental data for presence and motion analysis.
+Example interaction:
 
 ```text
-              RF / Wireless Signals
-                       |
-                       v
-              +----------------+
-              | RuView / RF    |
-              | Processing     |
-              +-------+--------+
-                      |
-                      v
-              Spatial Features
-                      |
-                      v
-              ML Interpretation
-                      |
-          +-----------+-----------+
-          |                       |
-          v                       v
-   Presence / Motion       Spatial Context
-          |                       |
-          +-----------+-----------+
-                      |
-                      v
-                 JARVIS CORE
-                      |
-                      v
-             3D / AR Visualization
+Camera Feed
+     │
+     ▼
+Hand / Body Detection
+     │
+     ▼
+Landmark Extraction
+     │
+     ▼
+ML Gesture Classifier
+     │
+     ▼
+JARVIS Command Mapping
+     │
+     ▼
+Desktop / 3D / AR Action
 ```
 
-The long-term research direction is **sensor fusion**: combining camera vision, motion information, RF-derived signals and AI reasoning into a unified representation of the surrounding environment.
+---
+
+# 📡 RuView RF Spatial Sensing
+
+> **Status: Experimental / Research Integration**
+
+A major research direction for JARVIS is integration with **RuView-based RF/Wi-Fi sensing**.
+
+The objective is to investigate whether RF-derived environmental information can supplement conventional camera perception for spatial awareness.
+
+### RuView Reference
+
+<p align="center">
+  <img src="assets/ruview-rf-sensing.png" width="90%" alt="RuView RF spatial sensing visualization">
+</p>
+
+<p align="center">
+  <i>RuView reference visualization illustrating RF/Wi-Fi-based occupancy and pose sensing. This is not presented as a JARVIS-native screenshot.</i>
+</p>
+
+Conceptual pipeline:
+
+```text
+              RF / Wi-Fi Signals
+                      │
+                      ▼
+              RuView Processing
+                      │
+                      ▼
+             Spatial RF Features
+                      │
+              ┌───────┴───────┐
+              ▼               ▼
+          Presence          Motion
+          Detection        Features
+              │               │
+              └───────┬───────┘
+                      ▼
+              ML Interpretation
+                      │
+                      ▼
+                JARVIS CORE
+                      │
+                      ▼
+            Spatial Representation
+                      │
+              ┌───────┴────────┐
+              ▼                ▼
+          AI Reasoning    3D/AR Display
+```
+
+Potential research areas include:
+
+- Presence detection
+- Motion sensing
+- Occupancy estimation
+- RF-derived spatial features
+- Camera + RF sensor fusion
+- Environment-aware AI reasoning
 
 ---
 
-# Development Roadmap
+# 🔬 Sensor Fusion
+
+> **Status: Future Research**
+
+The longer-term objective is not to make JARVIS depend on a single sensor.
+
+Instead, the system is intended to combine multiple perception channels:
 
 ```text
-JARVIS Core
+                ┌─────────────┐
+                │   CAMERA    │
+                └──────┬──────┘
+                       │
+     ┌─────────────┐   │   ┌─────────────┐
+     │ RF / RuView │───┼───│   MOTION    │
+     └─────────────┘   │   └─────────────┘
+                       │
+                ┌──────▼──────┐
+                │ SENSOR      │
+                │ FUSION      │
+                └──────┬──────┘
+                       │
+                       ▼
+               Spatial Context
+                       │
+                       ▼
+                 JARVIS CORE
+                       │
+                       ▼
+           Environment-Aware Actions
+```
+
+This remains a research direction rather than a claim of completed implementation.
+
+---
+
+# 🗺️ Development Roadmap
+
+```text
+MARK XLIX
 Voice AI + Desktop Automation
-        |
-        v
-Multimodal JARVIS
+        │
+        ▼
+Multimodal Intelligence
 Vision + Screen Awareness + Memory
-        |
-        v
-Agentic JARVIS
+        │
+        ▼
+Agentic Intelligence
 Autonomous Multi-Step Execution
-        |
-        v
-Spatial JARVIS
-3D Visualization + Spatial UI
-        |
-        v
+        │
+        ▼
+Hybrid Intelligence
+Local LLM + Web LLM Routing
+        │
+        ▼
+Spatial Computing
+Interactive 3D + AR Visualization
+        │
+        ▼
 Motion Intelligence
 Gesture + Pose + ML Recognition
-        |
-        v
-Sensor Intelligence
-RF / RuView + Sensor Fusion
-        |
-        v
-Environment-Aware AI System
+        │
+        ▼
+RF Spatial Perception
+RuView + Environmental Sensing
+        │
+        ▼
+Sensor Fusion
+Camera + Motion + RF
+        │
+        ▼
+Environment-Aware JARVIS
 ```
 
-### Current
-- Voice-driven AI interaction
-- Desktop and browser control
-- Screen/webcam awareness
+### ✅ Implemented / Current Core
+
+- Real-time voice interaction
+- Desktop-level computer control
+- Browser control
+- Screen and webcam awareness
 - Persistent memory
 - Autonomous task execution
-- File and web intelligence
+- Web research
+- File processing
 - Hardware monitoring
-- Messaging and developer tools
+- Messaging integrations
+- Code/developer assistance
+- Smart reminders
+- Clipboard intelligence
+- Proactive assistance
+- Remote dashboard architecture
 
-### In Development
+### 🚧 Active Development
+
 - Local LLM integration
+- Hybrid local/web model routing
 - Interactive 3D visualization
 - AI-driven 3D model workflows
 - Gesture recognition
@@ -264,79 +531,26 @@ Environment-Aware AI System
 - Pose estimation
 - Spatial interfaces
 
-### Research / Future
-- RuView RF spatial sensing
+### 🔬 Research / Future
+
+- RuView RF sensing integration
 - Multi-sensor fusion
-- Environment mapping
+- RF-derived environment awareness
 - Camera + RF perception
-- Spatially aware autonomous actions
+- Spatial environment representation
+- Environment-aware autonomous actions
 - Advanced AR interaction
 
 ---
 
-# Screenshots & Demonstrations
-
-Add actual project screenshots and demonstrations here as each subsystem becomes operational.
-
-```markdown
-<!-- Example:
-![JARVIS HUD](assets/jarvis-hud.png)
-![Vision System](assets/vision-demo.png)
-![3D Spatial Interface](assets/3d-spatial-demo.png)
-![Gesture Recognition](assets/gesture-demo.png)
-![RF Spatial System](assets/rf-spatial-demo.png)
--->
-```
-
-Recommended repository structure:
-
-```text
-assets/
-├── jarvis-hud.png
-├── desktop-control.png
-├── vision-demo.png
-├── 3d-spatial-demo.png
-├── gesture-demo.png
-└── architecture.png
-```
-
-Use **real screenshots for implemented functionality**. Experimental concepts should be labelled as simulations, prototypes or architecture diagrams rather than presented as completed functionality.
-
----
-
-# Quick Start
-
-```bash
-git clone https://github.com/divyanshsharma24-git/JARVIS.git
-cd JARVIS
-pip install -r requirements.txt
-python main.py
-```
-
-> Some OS-specific dependencies may need to be installed separately.
-
----
-
-# Requirements
-
-| Requirement | Details |
-|---|---|
-| OS | Windows 10/11, macOS or Linux |
-| Python | Python 3.11 / 3.12 |
-| Microphone | Required for voice interaction |
-| Camera | Required for camera-based visual perception |
-| AI Configuration | Configure the required model/API credentials locally |
-| GPU | Recommended for heavier local AI/vision workloads |
-
----
-
-# Project Structure
+# 🗂️ Project Structure
 
 ```text
 JARVIS/
 ├── main.py
 ├── ui.py
 ├── setup.py
+│
 ├── actions/
 │   ├── web_search.py
 │   ├── screen_processor.py
@@ -357,32 +571,147 @@ JARVIS/
 │   ├── dev_agent.py
 │   ├── desktop.py
 │   └── proactive.py
+│
 ├── memory/
+│
 ├── core/
 │   └── prompt.txt
-└── config/
-    └── api_keys.json
+│
+├── config/
+│   └── api_keys.json
+│
+└── assets/
+    ├── jarvis-hud.png
+    ├── jarvis-desktop-control.png
+    ├── computer-vision-reference.png
+    ├── gesture-recognition-reference.png
+    ├── 3d-spatial-reference.png
+    └── ruview-rf-sensing.png
 ```
 
 ---
 
+# ⚡ Quick Start
 
+```bash
+git clone https://github.com/divyanshsharma24-git/JARVIS.git
+cd JARVIS
+pip install -r requirements.txt
+python main.py
+```
 
-# Technology Direction
-
-**Python · Machine Learning · Multimodal AI · Local LLMs · Web LLMs · Computer Vision · Agentic AI · Desktop Automation · 3D Graphics · Spatial Computing · Gesture Recognition · Sensor Fusion · RF Sensing**
+> Some operating-system-specific dependencies may need to be installed separately.
 
 ---
 
-## Author
+# 📋 Requirements
 
-## Divyansh Sharma 
-### Engineering 2nd Year Undergraduate
-### Department of Artificial Intelligence and Data Science Engineering (AIDE)
-### Indian Institute of Technology, Jodhpur 
+| Requirement | Details |
+|---|---|
+| **Operating System** | Windows 10/11, macOS or Linux |
+| **Python** | Python 3.11 / 3.12 |
+| **Microphone** | Required for voice interaction |
+| **Camera** | Required for camera-based visual perception |
+| **AI Configuration** | Configure required model/API credentials locally |
+| **GPU** | Recommended for heavier local LLM, ML and computer-vision workloads |
+
+---
+
+# 🔐 Security
+
+Never commit API keys, tokens, passwords or other credentials to the public repository.
+
+Recommended `.gitignore`:
+
+```gitignore
+# Secrets
+config/api_keys.json
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Runtime
+*.log
+*.tmp
+cache/
+temp/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+```
+
+For public distribution, provide an example configuration containing placeholders rather than real credentials.
+
+---
+
+# 🛠️ Technology Stack & Research Areas
+
+<p align="center">
+
+**Python** • **Machine Learning** • **Multimodal AI** • **Local LLMs** • **Web LLMs**  
+**Computer Vision** • **Agentic AI** • **Desktop Automation** • **Persistent Memory**  
+**3D Graphics** • **Spatial Computing** • **Gesture Recognition** • **Sensor Fusion** • **RF Sensing**
+
+</p>
+
+---
+
+# 🎯 Project Vision
+
+The objective of JARVIS is not to reproduce a fictional assistant interface.
+
+The engineering direction is to build a modular AI system capable of:
+
+**perceiving → reasoning → remembering → acting → visualizing → interacting with its environment.**
+
+```text
+PERCEIVE
+Voice • Screen • Camera • Sensors
+        │
+        ▼
+REASON
+Local / Web AI Models
+        │
+        ▼
+REMEMBER
+Persistent Context
+        │
+        ▼
+ACT
+Desktop • Browser • Files • Tools
+        │
+        ▼
+VISUALIZE
+3D • AR • Spatial Interfaces
+        │
+        ▼
+UNDERSTAND ENVIRONMENT
+Vision • Motion • RF • Sensor Fusion
+```
+
+---
+
+## 👨‍💻 Author
+
+# Divyansh Sharma 
+## Engineering 2nd Year Undergraduate
+## Department of Artificial Intelligence and Data Science Engineering (AIDE)
+## Indian Institute of Technology, Jodhpur 
 
 
+J.A.R.V.I.S. is an independently developed experimental project exploring multimodal AI agents, computer automation, Machine Learning and spatial human-computer interaction.
 
+---
 
-
-### J.A.R.V.I.S. is an independently developed experimental AI and spatial-computing project.
+<p align="center">
+  <b>J.A.R.V.I.S. — Just A Rather Very Intelligent System</b>
+</p>
